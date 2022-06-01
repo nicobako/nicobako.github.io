@@ -4,8 +4,11 @@
     --color-light-gray: rgb(210, 210, 210);
     --color-teal: rgb(144, 185, 185);
     --color-teal-dark: rgb(115, 150, 150);
-    --color-black: rgb(10, 10, 10);
+    --color-black: rgb(15, 15, 15);
 }
+
+
+/* html elements */
 
 * {
     box-sizing: border-box;
@@ -21,6 +24,9 @@ a {
 a:hover {
     color: var(--color-black);
 }
+
+
+/* BEM classes */
 
 .body {
     background-color: var(--color-light-gray);
@@ -39,7 +45,7 @@ a:hover {
 }
 
 .nav__title {
-    font-size: 2.0rem;
+    font-size: 2.5rem;
 }
 
 .nav__links {
@@ -58,4 +64,8 @@ a:hover {
 
 .nav__links--item:hover {
     background-color: var(--color-teal-dark);
+}
+
+.main {
+    text-align: center;
 }
