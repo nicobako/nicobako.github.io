@@ -1,11 +1,10 @@
 /* variables */
 
 :root {
-    --color-light-gray: rgb(200, 200, 200);
-    --color-blue: rgb(28, 28, 83);
-    --color-black: rgb(10, 10, 10);
-    --color-teal: rgb(123, 167, 167);
+    --color-light-gray: rgb(210, 210, 210);
+    --color-teal: rgb(144, 185, 185);
     --color-teal-dark: rgb(115, 150, 150);
+    --color-black: rgb(10, 10, 10);
 }
 
 * {
