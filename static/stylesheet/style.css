@@ -56,9 +56,14 @@ a {
     border-radius: 5px;
 }
 
-.nav__item:hover {
-    background-color: var(--color-light);
-    color: var(--color-dark);
+
+/* Only link color if hover is supported */
+
+@media (any-hover:hover) {
+    .nav__item:hover {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+    }
 }
 
 .main {
