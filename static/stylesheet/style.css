@@ -1,7 +1,7 @@
 /* variables */
 
 :root {
-    /* Color of the logo!!! important to not change 50,50,50 */
+    /* Colors of the logo!!! important to not change 50 or 157 */
     --color-dark: rgb(50, 50, 50);
     --color-mid: rgb(157, 157, 157);
     --color-light: rgb(240, 240, 240);
@@ -59,7 +59,7 @@ a {
 
 /* Only link color if hover is supported */
 
-@media (any-hover:hover) {
+@media (min-width:1200px) {
     .nav__item:hover {
         background-color: var(--color-light);
         color: var(--color-dark);
@@ -70,7 +70,7 @@ a {
     text-align: center;
     border-width: 5px 0px 5px 0px;
     border-style: solid;
-    border-color: var(--color-mid);
+    border-color: var(--color-dark);
 }
 
 .footer {
