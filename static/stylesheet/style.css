@@ -3,6 +3,7 @@
 :root {
     /* Color of the logo!!! important to not change 50,50,50 */
     --color-dark: rgb(50, 50, 50);
+    --color-mid: rgb(157, 157, 157);
     --color-light: rgb(240, 240, 240);
 }
 
@@ -31,10 +32,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* top-right-bottom-left */
-    border-width: 0px 0px 5px 0px;
-    border-style: solid;
-    border-color: var(--color-dark);
     padding-bottom: 7px;
 }
 
@@ -66,4 +63,11 @@ a {
 
 .main {
     text-align: center;
+    border-width: 5px 0px 5px 0px;
+    border-style: solid;
+    border-color: var(--color-mid);
+}
+
+.footer {
+    font-size: 12px;
 }
