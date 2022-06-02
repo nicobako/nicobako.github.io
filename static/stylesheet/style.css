@@ -1,10 +1,9 @@
 /* variables */
 
 :root {
-    --color-light-gray: rgb(210, 210, 210);
-    --color-teal: rgb(144, 185, 185);
-    --color-teal-dark: rgb(115, 150, 150);
-    --color-black: rgb(15, 15, 15);
+    /* Color of the logo!!! important to not change 50,50,50 */
+    --color-dark: rgb(50, 50, 50);
+    --color-light: rgb(210, 210, 210);
 }
 
 
@@ -13,26 +12,21 @@
 * {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    color: var(--color-black);
+    color: var(--color-dark);
 }
 
 a {
-    color: var(--color-black);
     text-decoration: none;
-}
-
-a:hover {
-    color: var(--color-black);
 }
 
 
 /* BEM classes */
 
 .body {
-    background-color: var(--color-light-gray);
+    background-color: var(--color-light);
 }
 
-.nav {
+.header {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -40,30 +34,34 @@ a:hover {
     /* top-right-bottom-left */
     border-width: 0px 0px 5px 0px;
     border-style: solid;
-    border-color: var(--color-black);
+    border-color: var(--color-dark);
     padding-bottom: 7px;
 }
 
-.nav__title {
-    font-size: 2.5rem;
+.logo__img {
+    background-color: var(--color-light);
+    mix-blend-mode: multiply;
 }
 
-.nav__links {
+.nav {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    /* align-items: center; */
+    align-items: center;
 }
 
-.nav__links--item {
+.nav__item {
     margin: 2px 5px 2px 5px;
     padding: 0 1rem 0 1rem;
-    background-color: var(--color-teal);
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    border: solid var(--color-dark);
     border-radius: 5px;
 }
 
-.nav__links--item:hover {
-    background-color: var(--color-teal-dark);
+.nav__item:hover {
+    background-color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .main {
