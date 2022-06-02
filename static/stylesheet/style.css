@@ -59,7 +59,7 @@ a {
     border-radius: 5px;
 }
 
-.nav__item:hover {
+.nav__item:hover .nav__item:active {
     background-color: var(--color-light);
     color: var(--color-dark);
 }
