@@ -1,2 +1,2 @@
 # nicobako.github.io
-main page for nicobako.com
+main page for [nicobako.dev](nicobako.dev).
