@@ -73,6 +73,12 @@ a {
     border-color: var(--color-dark);
 }
 
+#canvas {
+    border-color: var(--color-dark);
+    border-style: ridge;
+    border-width: 5px;
+}
+
 .footer {
     font-size: 12px;
 }
