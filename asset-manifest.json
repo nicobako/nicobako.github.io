@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.94814013.css",
+    "main.js": "/static/js/main.a9886622.js",
+    "static/js/787.c6ca0693.chunk.js": "/static/js/787.c6ca0693.chunk.js",
+    "static/media/nico-bako.jpg": "/static/media/nico-bako.872585687725e9e0eafe.jpg",
+    "index.html": "/index.html",
+    "main.94814013.css.map": "/static/css/main.94814013.css.map",
+    "main.a9886622.js.map": "/static/js/main.a9886622.js.map",
+    "787.c6ca0693.chunk.js.map": "/static/js/787.c6ca0693.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.94814013.css",
+    "static/js/main.a9886622.js"
+  ]
+}
