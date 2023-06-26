@@ -1,8 +1,0 @@
-/* defines css variables for use in other stylesheets */
-:root {
-    /* Colors of the logo!!! important to not change 50 or 157 */
-    --color-dark: rgb(50, 50, 50);
-    --color-mid: rgb(157, 157, 157);
-    --color-light: rgb(240, 240, 240);
-    --color-turquoise: #61dafb;
-}
