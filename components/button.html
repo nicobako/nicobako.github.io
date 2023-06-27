@@ -1,1 +1,8 @@
-<button x-on:click="count++"  hx-swap="innerHTML" hx-target="#counter" x-text=" typeof text === 'undefined' ? 'Click default' : text;">Click me</button>
+<!-- alpine.js variables: text: str,  incr: bool-->
+<button 
+    x-on:click="increment ? count++: count--;"  
+    hx-swap="innerHTML" 
+    hx-target="#counter" 
+    x-text=" typeof text === 'undefined' ? 'Click me' : text;"
+>
+</button>
