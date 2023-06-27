@@ -12,6 +12,10 @@ Instead, I'm writing this with plain HTML... and a few other libraries.
 
 If you're interested in seeing the source code take a look at the [GitHub Repo for this site](https://github.com/nicobako/nicobako.github.io).
 
+### [md-block](https://md-block.verou.me/)
+
+I'm using *md-block* for rendering *markdown*. Because I love *markdown* and *md-block* library is so easy to use!
+
 ### [htmx](https://htmx.org/)
 
 I'm using *htmx* for replacing content on pages to simulate an SPA.
