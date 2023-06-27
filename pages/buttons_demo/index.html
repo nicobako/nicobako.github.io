@@ -1,19 +1,19 @@
-<h2>Demo of using htmx and alpine.js to keep track button clicks.</h2>
+<h2>Demo of using htmx and alpine.js to track button clicks.</h2>
 
 <div class="column" x-data="{ count: 0 }">
     <div class="row">
     <div 
-        hx-get="../components/button.html" 
+        hx-get="./pages/buttons_demo/button.html" 
         hx-trigger="load"
         x-data="{text: 'Increment', increment:true}">
     </div>
     <div 
-        hx-get="../components/button.html" 
+        hx-get="./pages/buttons_demo/button.html" 
         hx-trigger="load"
         x-data="{text: 'Decrement', increment:false}">
     </div>
     </div>
-    <div hx-get="../components/count.html" hx-trigger="load"></div>
+    <div hx-get="./pages/buttons_demo/count.html" hx-trigger="load"></div>
 </div>
 
 <h2>Demo of using htmx and alpine.js to track multiple button clicks.</h2>
@@ -21,12 +21,12 @@
 <div class="column" x-data="{ count: 0 }">
     <div class="row" x-data="{increment:true}">
         <div 
-            hx-get="../components/button.html" 
+            hx-get="./pages/buttons_demo/button.html" 
             hx-trigger="load"
             x-data="{text: 'Increment 1'}">
         </div>
         <div
-            hx-get="../components/button.html" 
+            hx-get="./pages/buttons_demo/button.html" 
             hx-trigger="load"
             x-data="{text: 'Increment 2'}"
             >
@@ -34,16 +34,16 @@
     </div>
     <div class="row" x-data="{increment:false}">
         <div 
-            hx-get="../components/button.html" 
+            hx-get="./pages/buttons_demo/button.html" 
             hx-trigger="load"
             x-data="{text: 'Decrement 1'}">
         </div>
         <div
-            hx-get="../components/button.html" 
+            hx-get="./pages/buttons_demo/button.html" 
             hx-trigger="load"
             x-data="{text: 'Decrement 2'}"
             >
         </div>
     </div>
-    <div hx-get="../components/count.html" hx-trigger="load"></div>
+    <div hx-get="./pages/buttons_demo/count.html" hx-trigger="load"></div>
 </div>
