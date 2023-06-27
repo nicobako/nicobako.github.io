@@ -1,29 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Document</title>
+
+    <!-- md-block : markdown rendering -->
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+
+    <!-- htmx : SPA-like functionality -->
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+
+    <!-- Alpine.js : interactivity -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- styles -->
     <link href="./static/styles.css" rel="stylesheet">
 </head>
+
 <body class="column">
-    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
-    <!-- have a button POST a click via AJAX -->
+
     <h1>Nico Bako</h1>
-    <div class="column" x-data="{ count: 0 }">
-         <div hx-get="./button.html" hx-trigger="load"></div>
-        <div hx-get="./clicked.html" hx-trigger="load"></div>
+    <div class="row">
+        <button hx-get="./partials/readme.html" hx-target="#content" hx-trigger="load,click">Main</button>
+        <button hx-get="./partials/single_button_click.html" hx-target="#content">Single</button>
+        <button hx-get="./partials/double_button_click.html" hx-target="#content">Double</button>
     </div>
-    <div class="column" x-data="{ count: 0, text: 'multi-button' }">
-        <div class="row">
-            <div hx-get="./button.html" hx-trigger="load"></div>
-            <div hx-get="./button.html" hx-trigger="load"></div>
-        </div>
-       <div hx-get="./clicked.html" hx-trigger="load"></div>
-   </div>
-   <span>Hello Bob and Sue</span>
-    
+    <div id="content"></div>
+
 </body>
+
 </html>
