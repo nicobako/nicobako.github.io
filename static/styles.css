@@ -1,7 +1,7 @@
 /* defines css variables for use in other stylesheets */
 :root {
   --color-back: rgb(50, 50, 50);
-  --color-middle: rgb(157, 157, 157);
+  --color-middle: rgb(124, 123, 123);
   --color-front: rgb(240, 240, 240);
   --color-fun: #3dd4d4;
   --color-morbid: rgb(133, 99, 214);
@@ -32,9 +32,15 @@ blockquote {
 }
 
 button {
-  background-color: inherit;
+  background-color: var(--color-middle);
   border-color: var(--color-fun);
   border-radius: 15px;
+  color: var(--color-back);
+  margin: 5px;
+}
+
+button:hover {
+  background-color: var(--color-front);
 }
 
 a {
@@ -51,6 +57,7 @@ a:hover {
 #content {
   padding: 15px;
 }
+
 /* classes */
 
 .column {

@@ -20,11 +20,10 @@ I'm using *md-block* for rendering *markdown*. Because I love *markdown* and *md
 
 I'm using *htmx* for replacing content on pages to simulate an SPA.
 
-### [Alpine JS](https://alpinejs.dev/)
+### [hyperscript](https://hyperscript.org/)
 
-I'm using *Alpine.js* for all things *JavaScript-y* (i.e. interactivity)
-when I don't want to write any *js* myself.
-
+Hyperscript plays very well with htmx and adds
+JavaScript-y functionality directly in HTML!
 ### Development
 
 [Vscode](https://code.visualstudio.com/) and [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).

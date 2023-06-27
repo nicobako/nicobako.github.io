@@ -14,19 +14,19 @@
     <!-- htmx : SPA-like functionality -->
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
 
-    <!-- Alpine.js : interactivity -->
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <!-- hyperscript : JavaScript, hold the JavaScript -->
+    <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
     <!-- styles -->
     <link href="/static/reset.css" rel="stylesheet">
-    <link href="./static/styles.css" rel="stylesheet">
+    <link href="/static/styles.css" rel="stylesheet">
 
     <!-- PWA -->
-    <link rel="manifest" href="manifest.json" />
+    <link rel="manifest" href="/pwa/manifest.json" />
     <meta name="theme-color" content="#ffffff">
     <script>
         if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('sw.js');
+            navigator.serviceWorker.register('/pwa/sw.js');
         };
     </script>
 </head>
