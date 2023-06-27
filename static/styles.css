@@ -3,8 +3,8 @@
     --color-back: rgb(50, 50, 50);
     --color-middle: rgb(157, 157, 157);
     --color-front: rgb(240, 240, 240);
-    --color-fun: #61dafb;
-    --color-morbid: rgb(192, 135, 44);
+    --color-fun: #141616;
+    --color-morbid: rgb(29, 28, 26);
 }
 
 /* html elements */
@@ -43,8 +43,14 @@ a {
 
 /* classes */
 
-.flexed {
+.column {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
