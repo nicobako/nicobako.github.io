@@ -1,6 +1,6 @@
 # [nicobako.dev](https://nicobako.dev)
 
-This is the code repository for [nicobako.dev](https://nicobako.dev), my personal site that is *a work in progress* and *a playground*.
+[nicobako.dev](https://nicobako.dev) is my personal site that is *still a work in progress* and, let's be honest, *a playground*.
 
 ## Design
 
@@ -9,6 +9,8 @@ I'm trying something new here.
 All my friends told me about is cool thing called _React_, and that *I just had to use it*, but what do they know...
 
 Instead, I'm writing this with plain HTML... and a few other libraries.
+
+If you're interested in seeing the source code take a look at the [GitHub Repo for this site](https://github.com/nicobako/nicobako.github.io).
 
 ### [htmx](https://htmx.org/)
 
