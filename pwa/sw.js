@@ -10,7 +10,9 @@ self.addEventListener('install', e => {
         './',
         './index.html',
         './manifest.json',
-        './static/style.css',
+        './static/styles.css',
+        './static/reset.css',
+        './static/nico-bako.png',
       ]);
     })
   );
