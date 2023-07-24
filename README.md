@@ -6,9 +6,9 @@
 
 I'm trying something new here.
 
-All my friends told me about is cool thing called _React_, and that *I just had to use it*, but what do they know...
+All my friends told me about is cool thing called _React_, and that *I just had to use it*, but what do they know?
 
-Instead, I'm writing this with plain HTML... and a few other libraries.
+Instead, I'm writing this with plain HTML, and a few other libraries.
 
 If you're interested in seeing the source code take a look at the [GitHub Repo for this site](https://github.com/nicobako/nicobako.github.io).
 
