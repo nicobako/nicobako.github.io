@@ -1,19 +1,18 @@
 const cacheName = 'nicobako';
 
-// Cache all the files to make a PWA
-self.addEventListener('install', e => {
-  e.waitUntil(
-    caches.open(cacheName).then(cache => {
-      // Our application only has two files here index.html and manifest.json
-      // but you can add more such as style.css as your app grows
-      return cache.addAll([
-        './index.html',
-        './manifest.json',
-        './static/styles.css',
-        './static/reset.css',
-        './static/nico-bako.png',
-      ]);
-    })
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches
+      .open(cacheName)
+      .then((cache) =>
+        cache.addAll([
+          "/",
+          "/index.html",
+          "/static/styles.css",
+          "/static/reset.css",
+          "/static/nico-bako.png",
+        ]),
+      ),
   );
 });
 
