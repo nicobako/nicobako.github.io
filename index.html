@@ -25,25 +25,22 @@
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#ffffff">
     <script>
-        if('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('./pwa/sw.js');
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js');
         };
     </script>
 </head>
 
 <body class="column">
 
-    <h1>Climbing Day</h1>
-
-    <p>Who's asking?</p>
-    <div class="column">
-        <div class="row">
-        <button _="on click put 'Sunday' into  #answer">Matt</button>
-        <button _="on click put 'Not sure... and I don\'t see any typos. In your face!!!' into #answer">Andrew</button>
-        </div>
-        <output id="answer"></output>
+    <h1>Nico Bako</h1>
+    <button _="on click toggle @data-theme='light' on body">Dark/Light</button>
+    <div class="row">
+        <button hx-get="./pages/readme.html" hx-target="#content" hx-trigger="load,click">Main</button>
+        <button hx-get="/pages/about_me/index.html" hx-target="#content">About Me</button>
+        <button hx-get="./pages/buttons_demo/index.html" hx-target="#content">Buttons Demo</button>
     </div>
-    
+    <div id="content"></div>
 
 </body>
 
