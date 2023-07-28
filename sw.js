@@ -15,7 +15,6 @@ self.addEventListener("install", (event) => {
           "/pages/about_me/about_me.md",
           "/pages/about_me/index.html",
           "/pages/about_site/index.html",
-          "/pages/buttons_demo/index.html",
           "https://md-block.verou.me/md-block.js",
           "https://unpkg.com/htmx.org@1.9.2",
           "https://unpkg.com/hyperscript.org@0.9.8",
