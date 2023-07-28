@@ -49,11 +49,15 @@ button {
   border-color: var(--color-fun);
   border-radius: 15px;
   color: var(--color-back);
-  margin: 5px;
+  margin: 7px;
 }
 
 button:hover {
   background-color: var(--color-front);
+}
+
+p {
+  padding-bottom: 5px;
 }
 
 a {

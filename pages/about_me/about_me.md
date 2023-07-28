@@ -1,10 +1,14 @@
-# About Nico
+# About Me
 
-I'm a software developer with that loves writing *beautiful code*.
+My name is Nico Bako.
 
-I have a firm belief that writing code is about more than *implementing features*. Writing code is a creative process that is equal parts art and science.
+I'm a software developer with a passion for writing *beautiful code*.
 
-My principle goal, when writing code, is to create software that improves the lives of whoever interacts with it. This includes customers, other developers, and fo course, myself.
+I have a firm belief that writing code is about more than *implementing features*.
+Writing code is a creative process that is equal parts art and science.
+
+My principle goal, when writing code, is to create software that improves the lives of whoever interacts with it.
+This includes customers, other developers, and of course, myself.
 
 ## Social Links
 

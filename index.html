@@ -29,11 +29,12 @@
             navigator.serviceWorker.register('/sw.js');
         };
     </script>
+    <link rel="apple-touch-icon" sizes="180x180" href="/static/nico-bako.png">
 </head>
 
 <body class="column">
 
-    <h1>Nico Bako</h1>
+    <h1><a href="/">Nico Bako</a></h1>
     <button _="on click toggle @data-theme='light' on body">Dark/Light</button>
     <div class="row">
         <button hx-get="/pages/about_me/index.html" hx-target="#content" hx-trigger="load,click">About Me</button>
