@@ -1,17 +1,23 @@
 /* defines css variables for use in other stylesheets */
-:root {
+html {
   /* grayscale */
   --color-darkest: rgb(25, 25, 25);
   --color-dark: rgb(50, 50, 50);
   --color-gray: rgb(128, 128, 128);
   --color-light: rgb(200, 200, 200);
   --color-lightest: rgb(240, 240, 240);
+  /* colors */
+  --color-fun: #5ca9a9;
 
   --color-back: var(--color-dark);
   --color-middle: rgb(124, 123, 123);
   --color-front: rgb(240, 240, 240);
-  --color-fun: #5ca9a9;
-  --color-morbid: rgb(133, 99, 214);
+  
+}
+
+:root[data-theme='light'] {
+  --color-back: var(--color-lightest);
+  --color-front: var(--color-darkest);
 }
 
 /* html elements */
@@ -27,11 +33,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-back);
   padding: 10px;
-}
-
-body[data-theme="light"] {
-  background-color: var(--color-front);
-  color: var(--color-back);
 }
 
 code {
