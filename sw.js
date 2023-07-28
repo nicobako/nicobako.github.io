@@ -12,9 +12,13 @@ self.addEventListener("install", (event) => {
           "/static/styles.css",
           "/static/reset.css",
           "/static/nico-bako.png",
+          "/pages/about_me/about_me.md",
+          "/pages/about_me/index.html",
+          "/pages/about_site/index.html",
+          "/pages/buttons_demo/index.html",
           "https://md-block.verou.me/md-block.js",
-            "https://unpkg.com/htmx.org@1.9.2",
-            "https://unpkg.com/hyperscript.org@0.9.8",
+          "https://unpkg.com/htmx.org@1.9.2",
+          "https://unpkg.com/hyperscript.org@0.9.8",
         ]),
       ),
   );
@@ -36,10 +40,12 @@ self.addEventListener("fetch", (event) => {
         // If we found a match in the cache, return it, but also
         // update the entry in the cache in the background.
         event.waitUntil(cache.add(event.request));
+        console.log("resource found in cache");
         return cachedResponse;
       }
 
       // If we didn't find a match in the cache, use the network.
+      console.log("resource not found in cache");
       return fetch(event.request);
     })(),
   );

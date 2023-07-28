@@ -1,7 +1,7 @@
-# About Me
+# About Nico
 
-I'm a software engineer who holds some *pretty radical beliefs* about code and software:
+I'm a software developer with that loves writing *beautiful code*.
 
-- If your code is not making the world a better place, then it's probably making it worse.
-- Software is both an art and a science.
-- Code can - and should - be beautiful.
+I have a firm belief that writing code is about more than *implementing features*. Writing code is a creative process that is equal parts art and science.
+
+My principle goal, when writing code, is to create software that improves the lives of whoever interacts with it. This includes customers, other developers, and fo course, myself.
