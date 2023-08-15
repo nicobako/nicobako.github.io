@@ -18,6 +18,8 @@ self.addEventListener("install", (event) => {
           "https://md-block.verou.me/md-block.js",
           "https://unpkg.com/htmx.org@1.9.2",
           "https://unpkg.com/hyperscript.org@0.9.8",
+          "https://pyscript.net/latest/pyscript.js",
+          "https://pyscript.net/latest/pyscript.css",
         ]),
       ),
   );
