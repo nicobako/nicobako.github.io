@@ -17,10 +17,6 @@
     <!-- hyperscript : JavaScript, hold the JavaScript -->
     <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
-    <!-- py-script -->
-    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
-
     <!-- styles -->
     <link href="/static/reset.css" rel="stylesheet">
     <link href="/static/styles.css" rel="stylesheet">
@@ -37,16 +33,12 @@
 </head>
 
 <body class="column">
-    <py-config>
-        packages = ["matplotlib", "pandas"]
-    </py-config>
 
     <h1><a href="/">Nico Bako</a></h1>
     <button _="on click toggle @data-theme='light' on <:root/>">Dark/Light</button>
     <div class="row">
         <button hx-get="/pages/about_me/index.html" hx-target="#content" hx-trigger="load,click">About Me</button>
         <button hx-get="./pages/about_site/index.html" hx-target="#content">About Site</button>
-        <button hx-get="./pages/py_script/index.html" hx-target="#content">Py-Script</button>
     </div>
     <div id="content"></div>
 
