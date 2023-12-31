@@ -1,32 +1,17 @@
-# [nicobako.dev](https://nicobako.dev)
+# [nicobako.github.io](https://nicobako.github.io)
 
-[nicobako.dev](https://nicobako.dev) is my personal site that is *still a work in progress* and, let's be honest, *a playground*.
+Personal site.
 
-## Design
+Serves mostly as a playground for creating *static site* built with the same technologies that I would use for a full-fledged Django app:
 
-I'm trying something new here.
+* htmx
+* hyperscript
+* tailwind
 
-All my friends told me about is cool thing called _React_, and that *I just had to use it*, but what do they know?
+## Note
 
-Instead, I'm writing this with plain HTML, and a few other libraries.
+Create tailwind css files:
 
-If you're interested in seeing the source code take a look at the [GitHub Repo for this site](https://github.com/nicobako/nicobako.github.io).
-
-### [md-block](https://md-block.verou.me/)
-
-I'm using *md-block* for rendering *markdown*. Because I love *markdown* and *md-block* library is so easy to use!
-
-### [htmx](https://htmx.org/)
-
-I'm using *htmx* for replacing content on pages to simulate an SPA.
-
-### [hyperscript](https://hyperscript.org/)
-
-Hyperscript plays very well with htmx and adds
-JavaScript-y functionality directly in HTML!
-
-### Development
-
-[Vscode](https://code.visualstudio.com/) and [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
-
+```bash
 npx tailwindcss -i ./input.css -o ./static/output.css --watch
+```

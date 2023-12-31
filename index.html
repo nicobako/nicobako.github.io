@@ -6,10 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>nicobako.dev</title>
-
-    <!-- md-block : markdown rendering -->
-    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <title>nicobako</title>
 
     <!-- htmx : SPA-like functionality -->
     <script src="https://unpkg.com/htmx.org@1.9.2"></script>
@@ -17,7 +14,7 @@
     <!-- hyperscript : JavaScript, hold the JavaScript -->
     <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
-    <!-- styles -->
+    <!-- styles - built by tailwind-->
     <link href="/static/output.css" rel="stylesheet">
 
     <!-- PWA -->
@@ -32,18 +29,18 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/nico-bako.png">
 </head>
 
-<body class="flex-col items-center align-middle content-center">
-    <header id="header" class="flex-col items-center">
+<body class="flex flex-col items-center mx-10 my-5">
+    <header id="header" class="flex flex-col items-center">
 
-        <h1><a href="/">Nico Bako</a></h1>
-        <div class="flex-row">
-            <button _="on click  or load set #content.innerHTML to `<md-block id='content-md' src='/pages/about_me/about_me.md'>`"></md-block>About Me</button>
-            <button _="on click set #content.innerHTML to `<md-block id='content-md' src='/README.md'>`"></md-block>About Site</button>
+        <h1 class="my-2"><a href="/">Nico Bako</a></h1>
+        <div class="flex flex-row">
+            <button hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">About Me</button>
+            <button hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content"></md-block>About Site</button>
         </div>
     </header>
-    <div id="content">
-        
-    </div>
+    <content id="content">
+        Empty Content
+    </content>
 
 </body>
 
