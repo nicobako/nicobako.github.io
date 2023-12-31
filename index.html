@@ -18,8 +18,7 @@
     <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
     <!-- styles -->
-    <link href="/static/reset.css" rel="stylesheet">
-    <link href="/static/styles.css" rel="stylesheet">
+    <link href="/static/output.css" rel="stylesheet">
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -29,18 +28,22 @@
             navigator.serviceWorker.register('/sw.js');
         };
     </script>
+
     <link rel="apple-touch-icon" sizes="180x180" href="/static/nico-bako.png">
 </head>
 
-<body class="column">
+<body class="flex-col items-center align-middle content-center">
+    <header id="header" class="flex-col items-center">
 
-    <h1><a href="/">Nico Bako</a></h1>
-    <button _="on click toggle @data-theme='light' on <:root/>">Dark/Light</button>
-    <div class="row">
-        <button hx-get="/pages/about_me/index.html" hx-target="#content" hx-trigger="load,click">About Me</button>
-        <button hx-get="./pages/about_site/index.html" hx-target="#content">About Site</button>
+        <h1><a href="/">Nico Bako</a></h1>
+        <div class="flex-row">
+            <button _="on click  or load set #content.innerHTML to `<md-block id='content-md' src='/pages/about_me/about_me.md'>`"></md-block>About Me</button>
+            <button _="on click set #content.innerHTML to `<md-block id='content-md' src='/README.md'>`"></md-block>About Site</button>
+        </div>
+    </header>
+    <div id="content">
+        
     </div>
-    <div id="content"></div>
 
 </body>
 

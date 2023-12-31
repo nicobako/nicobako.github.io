@@ -28,3 +28,5 @@ JavaScript-y functionality directly in HTML!
 ### Development
 
 [Vscode](https://code.visualstudio.com/) and [Live Server Extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
+
+npx tailwindcss -i ./input.css -o ./static/output.css --watch
