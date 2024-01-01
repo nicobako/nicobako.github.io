@@ -21,11 +21,19 @@
     }
 
     button {
-        @apply rounded-lg bg-cyan-100;
+        @apply rounded-lg bg-cyan-100 mx-2;
     }
 
     p {
-        @apply space-y-10;
+        @apply my-2;
+    }
+
+    ul {
+      @apply list-disc;
+    }
+
+    ul li {
+      @apply mx-5;
     }
 
 
