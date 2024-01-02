@@ -15,3 +15,13 @@ Create tailwind css files:
 ```bash
 npx tailwindcss -i ./input.css -o ./static/output.css --watch
 ```
+
+Python version 3.12
+
+Generating favicon.ico
+
+```python
+from PIL import Image
+img = Image.open("static/nico-bako.png")
+img.save("favicon.ico")
+```
