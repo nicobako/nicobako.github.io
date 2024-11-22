@@ -14,8 +14,8 @@
     <!-- hyperscript : JavaScript, hold the JavaScript -->
     <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
-    <!-- styles - built by tailwind-->
-    <link href="/static/output.css" rel="stylesheet">
+    <!-- styles - by pico.css-->
+    <link href="/static/pico.min.css" rel="stylesheet">
 
     <!-- PWA -->
     <link rel="manifest" href="manifest.json" />
@@ -29,14 +29,31 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/static/nico-bako.png">
 </head>
 
-<body class="flex flex-col items-center mx-10 my-5">
-    <header id="header" class="flex flex-col items-center border-yellow-400">
+<body>
+    <nav>
+        <ul>
 
-        <h1 class="my-2"><a href="/">Nico Bako</a></h1>
-        <div class="flex flex-row">
-            <button hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">About Me</button>
-            <button hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content"></md-block>About Site</button>
-        </div>
+
+            <li>
+
+                <h1><a href="/">Nico Bako</a></h1>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <button hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">About Me</button>
+            </li>
+            <li>
+                <button hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content">About Site</button>
+            </li>
+            <li>
+                <button hx-trigger="click" hx-get="/pages/other_work.html" hx-target="#content">Other Work</button>
+            </li>
+            <li>
+                <button hx-trigger="click" hx-get="/pages/other_links.html" hx-target="#content">Other Links</button>
+            </li>
+        </ul>
+    </nav>
     </header>
     <content id="content">
         Empty Content
