@@ -8,10 +8,12 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/",
           "/index.html",
-          "/static/output.css",
+          "/static/pico.min.css",
           "/static/nico-bako.png",
           "/pages/about_me.html",
           "/pages/about_site.html",
+          "/pages/other_work.html",
+          "/pages/other_links.html",
           "https://unpkg.com/htmx.org@1.9.2",
           "https://unpkg.com/hyperscript.org@0.9.8",
         ]),
