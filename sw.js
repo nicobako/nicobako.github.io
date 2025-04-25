@@ -1,4 +1,4 @@
-const cacheName = 'nicobako';
+const cacheName = "nicobako";
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -8,7 +8,8 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/",
           "/index.html",
-          "/static/pico.min.css",
+          "/static/css/reset.css",
+          "/static/css/element.css",
           "/static/nico-bako.png",
           "/pages/about_me.html",
           "/pages/about_site.html",
@@ -16,8 +17,8 @@ self.addEventListener("install", (event) => {
           "/pages/other_links.html",
           "https://unpkg.com/htmx.org@1.9.2",
           "https://unpkg.com/hyperscript.org@0.9.8",
-        ]),
-      ),
+        ])
+      )
   );
 });
 
@@ -44,6 +45,6 @@ self.addEventListener("fetch", (event) => {
       // If we didn't find a match in the cache, use the network.
       console.log("resource not found in cache");
       return fetch(event.request);
-    })(),
+    })()
   );
 });

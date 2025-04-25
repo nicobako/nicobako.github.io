@@ -1,0 +1,16 @@
+name: nicobako-github-io
+
+services:
+  web:
+    container_name: nicobako-github-io-web
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: web
+    ports:
+      - "8080:8080"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /app
