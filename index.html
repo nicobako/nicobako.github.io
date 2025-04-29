@@ -14,12 +14,19 @@
   <!-- hyperscript : JavaScript, hold the JavaScript -->
   <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
 
-  <!-- custom css -->
-  <!-- <link rel="stylesheet" href="/static/css/reset.css" />
-  <link rel="stylesheet" href="/static/css/style.css" /> -->
-
   <!-- pico.css : CSS framework -->
-  <link rel="stylesheet" href="/static/css/pico.min.slate.css" />
+  <!-- <link rel="stylesheet" href="/static/css/pico.min.slate.css" /> -->
+
+  <!-- reset css
+   https://www.joshwcomeau.com/css/custom-css-reset/
+  -->
+  <link rel="stylesheet" href="/static/css/reset.css" />
+
+  <!-- meyer reset css -->
+  <link rel="stylesheet" href="/static/css/meyer-reset.css" />
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="/static/css/style.css" />
 
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#ffffff" />
@@ -29,59 +36,45 @@
     }
   </script>
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/nico-bako.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/img/nico-bako.png" />
 </head>
 
 <body>
   <main class="container">
     <nav>
-      <ul>
-        <li>
-          <span>
-            <a href="/">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 15c0 3.866 4.03 7 8 7s8-3.134 8-7H4z"></path>
-                <path d="M9 10c0-1.5 1-3 3-3s3 1.5 3 3"></path>
-                <path d="M10 4c0 .5-.5 1-1 1s-1-.5-1-1 .5-1 1-1 1 .5 1 1z"></path>
-                <path d="M14 4c0 .5-.5 1-1 1s-1-.5-1-1 .5-1 1-1 1 .5 1 1z"></path>
-              </svg>
-              nicobako
-            </a>
-          </span></a>
+      <div id="logo" class="row row-center">
+        <a href="/">
+          <em>
+            nicobako
+          </em>
+        </a>
+      </div>
+      <details id="pages">
+        <summary>Pages</summary>
+        <ul>
+          <li>
+            <span hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">
+              About Me
+            </span>
+          </li>
+          <li>
+            <span hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content">
+              About Site
+            </span>
+          </li>
+          <li>
+            <span hx-trigger="click" hx-get="/pages/other_work.html" hx-target="#content">
+              Other Work
+            </span>
+          </li>
+          <li>
+            <span class="primary" hx-trigger="click" hx-get="/pages/other_links.html" hx-target="#content">
+              Other Links
+            </span>
+        </ul>
         </li>
-      </ul>
-      <ul>
-        <li>
+      </details>
 
-          <details class="dropdown">
-            <summary>Pages</summary>
-            <ul>
-
-              <li>
-                <span hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">
-                  About Me
-                </span>
-              </li>
-              <li>
-                <span hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content">
-                  About Site
-                </span>
-              </li>
-              <li>
-                <span hx-trigger="click" hx-get="/pages/other_work.html" hx-target="#content">
-                  Other Work
-                </span>
-              </li>
-              <li>
-                <span class="primary" hx-trigger="click" hx-get="/pages/other_links.html" hx-target="#content">
-                  Other Links
-                </span>
-            </ul>
-        </li>
-        </details>
-        </li>
-      </ul>
     </nav>
     <content id="content"> Empty Content </content>
   </main>

@@ -9,14 +9,16 @@ self.addEventListener("install", (event) => {
           "/",
           "/index.html",
           "/static/css/reset.css",
+          "/static/css/style.css",
           "/static/css/element.css",
-          "/static/nico-bako.png",
+          "/static/css/pico.min.css",
+          "/static/img/nico-bako.png",
+          "/static/js/htmx.2.0.4.js",
+          "/static/js/script.js",
           "/pages/about_me.html",
           "/pages/about_site.html",
           "/pages/other_work.html",
           "/pages/other_links.html",
-          "https://unpkg.com/htmx.org@1.9.2",
-          "https://unpkg.com/hyperscript.org@0.9.8",
         ])
       )
   );
