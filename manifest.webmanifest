@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "icons": [
     {
-      "src": "static/nico-bako.png",
+      "src": "static/img/nico-bako.png",
       "type": "image/png",
       "sizes": "512x512"
     }
