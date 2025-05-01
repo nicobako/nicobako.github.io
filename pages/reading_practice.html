@@ -1,0 +1,38 @@
+<article>
+    <header>Reading Practice</header>
+    <div id="reading-practice-form">
+        <div>
+
+            <label for="line-count">Number of lines:</label>
+            <input type="number" id="line-count" name="line-count" min="1" max="100" value="25">
+        </div>
+        <div>
+
+            <label for="number-of-words-per-line">Number of Words Per Line</label>
+            <input type="number" id="number-of-words-per-line" name="number-of-words-per-line" min="1" max="21"
+                value="3">
+        </div>
+        <button type="submit" id="reading-practice-generate-button">Generate</button>
+    </div>
+    <main id="reading-practice">
+    </main>
+</article>
+
+<script type="module">
+    import { loadWords } from "/pages/read.js";
+
+    const doWords = async () => {
+        const lineCount = document.getElementById("line-count").value;
+        const numberOfWordsPerLine = document.getElementById("number-of-words-per-line").value;
+
+        await loadWords("reading-practice", lineCount, numberOfWordsPerLine);
+    };
+
+
+    const submitButton = document.getElementById("reading-practice-generate-button");
+
+    submitButton.addEventListener("click", async (event) => {
+        event.preventDefault();
+        await doWords();
+    });
+</script>

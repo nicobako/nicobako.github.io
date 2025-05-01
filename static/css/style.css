@@ -41,18 +41,9 @@ details {
   border-radius: 0.5rem;
   padding: 1rem;
 }
-details summary {
-  cursor: pointer;
+
+#pages summary {
   font-size: 1.25rem;
-}
-
-details summary::marker {
-  content: "";
-}
-
-details ul {
-  list-style: none;
-  padding-left: 0;
 }
 
 .row {
@@ -95,4 +86,32 @@ p {
 a {
   color: var(--color-foreground);
   text-decoration: none;
+}
+
+#reading-practice {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  padding-top: 1rem;
+  max-width: 100%;
+}
+
+#reading-practice div {
+  background-color: var(--color-mix);
+  color: var(--color-background);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+#reading-practice div p {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#reading-practice div p span {
+  padding: 0px 0.5rem;
 }
