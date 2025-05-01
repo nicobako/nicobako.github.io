@@ -1,0 +1,17 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "python-http-server",
+            "type":"shell",
+            "command": "python",
+            "args": [
+                "-m",
+                "http.server",
+                "--directory",
+                ".",
+                "8123",
+            ],
+        }
+    ]
+}
