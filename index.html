@@ -8,26 +8,20 @@
 
   <title>nicobako</title>
 
-  <!-- htmx : SPA-like functionality -->
-  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
-
-  <!-- hyperscript : JavaScript, hold the JavaScript -->
-  <script src="https://unpkg.com/hyperscript.org@0.9.8"></script>
-
-  <!-- pico.css : CSS framework -->
-  <!-- <link rel="stylesheet" href="/static/css/pico.min.slate.css" /> -->
-
   <!-- reset css
    https://www.joshwcomeau.com/css/custom-css-reset/
   -->
   <link rel="stylesheet" href="/static/css/reset.css" />
 
-
   <!-- custom css -->
   <link rel="stylesheet" href="/static/css/style.css" />
 
+  <!-- PWA -->
+  <link rel="apple-touch-icon" href="/static/img/nico-bako.png" />
+  <link rel="icon" type="image/png" href="/static/img/nico-bako.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <meta name="theme-color" content="#ffffff" />
+
   <script>
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.register("/sw.js");
@@ -53,35 +47,50 @@
         <summary>Pages</summary>
         <ul>
           <li>
-            <span hx-trigger="load,click" hx-get="/pages/about_me.html" hx-target="#content">
-              About Me
-            </span>
-          </li>
-          <li>
-            <span hx-trigger="click" hx-get="/pages/about_site.html" hx-target="#content">
+            <a class="nav-internal-link" data-page="/pages/about_site.html">
               About Site
-            </span>
+            </a>
           </li>
           <li>
-            <span hx-trigger="click" hx-get="/pages/other_work.html" hx-target="#content">
+            <a class="nav-internal-link" data-page="/pages/other_work.html">
               Other Work
-            </span>
+            </a>
           </li>
           <li>
-            <span class="primary" hx-trigger="click" hx-get="/pages/other_links.html" hx-target="#content">
+            <a class="nav-internal-link" data-page="/pages/other_links.html">
               Other Links
-            </span>
+            </a>
           </li>
           <li>
-            <span hx-trigger="click" hx-get="/pages/reading_practice.html" hx-target="#content">
+            <a class="nav-internal-link" data-page="/pages/reading_practice.html">
               Reading Practice
-            </span>
+            </a>
           </li>
         </ul>
       </details>
 
     </nav>
-    <content id="content"> Empty Content </content>
+    <content id="content">
+      <article>
+        <header>Welcome</header>
+        <p>
+          My name is Nico.
+
+          I am a software engineer with a firm belief that
+          writing code is both a scientific and artistic process.
+
+        </p>
+        <p>
+          My goal is to create software that improves the lives of all people who interact with it.
+          Depending on the user, this can mean different things.
+        </p>
+        <p>
+          For a customer, this means that the software is easy to use and does what it is supposed to do.
+          For a developer, this means that the software is easy to understand and maintain.
+          For a manager, this means that the software is delivered on time and within budget.
+        </p>
+      </article>
+    </content>
   </main>
   <script>
     console.log("Hello from the main script");

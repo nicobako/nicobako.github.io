@@ -94,8 +94,17 @@ p {
 }
 
 a {
-  color: var(--color-foreground);
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
   text-decoration: none;
+  color: var(--color-mix);
+}
+
+a:visited {
+  color: var(--color-mix);
 }
 
 #reading-practice {
