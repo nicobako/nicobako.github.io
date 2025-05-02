@@ -6,19 +6,18 @@ self.addEventListener("install", (event) => {
       .open(cacheName)
       .then((cache) =>
         cache.addAll([
-          "/",
           "/index.html",
+          "/favicon.ico",
           "/static/css/reset.css",
           "/static/css/style.css",
-          "/static/css/element.css",
-          "/static/css/pico.min.css",
           "/static/img/nico-bako.png",
           "/static/js/htmx.2.0.4.js",
           "/static/js/script.js",
           "/pages/about_me.html",
           "/pages/about_site.html",
-          "/pages/other_work.html",
           "/pages/other_links.html",
+          "/pages/other_work.html",
+          "/pages/reading_practice.html",
         ])
       )
   );
