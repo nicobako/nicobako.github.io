@@ -43,17 +43,30 @@ const doWords = async () => {
   const numberOfWordsPerLine = document.getElementById(
     "number-of-words-per-line"
   ).value;
+  const displayVerticalLines =
+    document.getElementById("display-vertical-line")?.checked ?? false;
 
-  await loadWords("reading-practice", lineCount, numberOfWordsPerLine);
+  await loadWords(
+    "reading-practice",
+    lineCount,
+    numberOfWordsPerLine,
+    displayVerticalLines
+  );
 };
 
 /**
  * @param {string} id - The ID of the HTML element where the words will be displayed.
  * @param {number} numberOfLines - The number of lines to display.
  * @param {number} numberOfWordsPerLine - The number of words to display per line.
+ * @param {boolean} displayVerticalLines - Whether to display vertical lines between words.
  * @returns {Promise<void>} A promise that resolves when the words are loaded and displayed.
  */
-const loadWords = async (id, numberOfLines, numberOfWordsPerLine) => {
+const loadWords = async (
+  id,
+  numberOfLines,
+  numberOfWordsPerLine,
+  displayVerticalLines
+) => {
   const mainElement = document.getElementById(id);
   if (!mainElement) {
     return;
@@ -82,6 +95,11 @@ const loadWords = async (id, numberOfLines, numberOfWordsPerLine) => {
     p.classList.add("line");
 
     div.appendChild(p);
+  }
+  if (displayVerticalLines) {
+    div.classList.add("vertical-line");
+  } else {
+    div.classList.remove("vertical-line");
   }
 
   mainElement.innerHTML = ""; // Clear the main element
