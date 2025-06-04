@@ -25,14 +25,14 @@
     }
   </script>
 
-  <script src="/static/js/components/navigator.js" type="module"></script>
+  <script src="/static/js/components/index.js" type="module"></script>
 
   <link rel="apple-touch-icon" sizes="180x180" href="/static/img/nico-bako.png" />
 </head>
 
 <body>
   <main class="container" class="dark">
-    <navigator-component>
+    <page-navigator>
       <nav>
         <div id="logo" class="row row-center">
           <a href="#home">
@@ -68,99 +68,99 @@
           </ul>
         </details>
       </nav>
-    </navigator-component>
+      </navigator-component>
 
-    <content id="content">
-      <article id="home">
-        <header>Welcome</header>
-        <p>
-          My name is Nico.
+      <content id="content">
+        <article id="home">
+          <header>Welcome</header>
+          <p>
+            My name is Nico.
 
-          I am a software engineer with a firm belief that
-          writing code is both a scientific and artistic process.
-        </p>
-        <p>
-          My goal is to create software that improves the lives of all people who interact with it.
-          Depending on the user, this can mean different things.
-        </p>
-        <p>
-          For a customer, this means that the software is easy to use and works properly.
-          For a developer, this means that the software is easy to understand and maintain.
-          And, for myself, this means that I enjoy both the process and the result of creating the software.
-        </p>
-        <p>
-          This site is just a simple way to claim a tiny piece of the internet,
-          and to build simple tools. I hope you enjoy it.
-        </p>
-      </article>
+            I am a software engineer with a firm belief that
+            writing code is both a scientific and artistic process.
+          </p>
+          <p>
+            My goal is to create software that improves the lives of all people who interact with it.
+            Depending on the user, this can mean different things.
+          </p>
+          <p>
+            For a customer, this means that the software is easy to use and works properly.
+            For a developer, this means that the software is easy to understand and maintain.
+            And, for myself, this means that I enjoy both the process and the result of creating the software.
+          </p>
+          <p>
+            This site is just a simple way to claim a tiny piece of the internet,
+            and to build simple tools. I hope you enjoy it.
+          </p>
+        </article>
 
-      <article id="about-site">
-        <header>About Site</header>
-        <p>
-          This site is a playground for me to experiment with HTML, CSS, and JS.
-        </p>
-        <p>This site is built using <i>advanced Web Technologies</i>
-        <ul>
-          <li><a href="https://www.joshwcomeau.com/css/custom-css-reset/">Josh Comeau's CSS reset</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-          <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
-        </ul>
-        </p>
-        <p>
-          This site is
-          <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWA</a>
-          and can be installed for offline use.
-        </p>
-      </article>
+        <article id="about-site">
+          <header>About Site</header>
+          <p>
+            This site is a playground for me to experiment with HTML, CSS, and JS.
+          </p>
+          <p>This site is built using <i>advanced Web Technologies</i>
+          <ul>
+            <li><a href="https://www.joshwcomeau.com/css/custom-css-reset/">Josh Comeau's CSS reset</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+          </ul>
+          </p>
+          <p>
+            This site is
+            <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWA</a>
+            and can be installed for offline use.
+          </p>
+        </article>
 
-      <article id="other-links">
-        <header>Other Links</header>
-        <ul>
-          <li>
-            <a href="https://github.com/nicobako" target="_blank">GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/nicobako/" target="_blank">LinkedIn</a>
-          </li>
-        </ul>
-      </article>
+        <article id="other-links">
+          <header>Other Links</header>
+          <ul>
+            <li>
+              <a href="https://github.com/nicobako" target="_blank">GitHub</a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/in/nicobako/" target="_blank">LinkedIn</a>
+            </li>
+          </ul>
+        </article>
 
-      <article id="other-works">
-        <header>Other Work</header>
-        <p>
-          <a href="https://nicobako.me/pythonic-misadventures" target="_blank">Pythonic Misadventures</a>, a simple blog
-          where I try to solve interesting problems with Python.
-        </p>
-        <p class="">
-          <a href="https://github.com/nicobako/grist-widgets">Grist Widgets</a>, for
-          the amazing
-          <a href="https://docs.getgrist.com/">Grist Spreadsheet/Database Tool</a>.
-        </p>
-      </article>
+        <article id="other-works">
+          <header>Other Work</header>
+          <p>
+            <a href="https://nicobako.me/pythonic-misadventures" target="_blank">Pythonic Misadventures</a>, a simple
+            blog
+            where I try to solve interesting problems with Python.
+          </p>
+          <p class="">
+            <a href="https://github.com/nicobako/grist-widgets">Grist Widgets</a>, for
+            the amazing
+            <a href="https://docs.getgrist.com/">Grist Spreadsheet/Database Tool</a>.
+          </p>
+        </article>
 
-      <article id="reading-practice">
-        <header>Reading Practice</header>
-        <div id="reading-practice-form">
-          <div>
+        <article id="reading-practice">
+          <reading-practice num-lines="aeae" num-words-per-line="3" display-vertical-line="true">
 
-            <label for="line-count">Number of lines:</label>
-            <input type="number" id="line-count" name="line-count" min="1" max="100" value="25">
+            <header>Reading Practice</header>
+            <button class="generate-button">
+              Generate
+            </button>
+            <button class="increment-button">
+              Increment
+            </button>
+            <button class="decrement-button">
+              Decrement
+            </button>
 
+            <main class="reading-practice-content">
+              This reading practice requires JavaScript enabled.
+            </main>
+          </reading-practice>
+        </article>
 
-            <label for="number-of-words-per-line">Number of Words Per Line:</label>
-            <input type="number" id="number-of-words-per-line" name="number-of-words-per-line" min="1" max="21"
-              value="3">
-            <label for="display-vertical-line">Display Vertical Line:</label>
-            <input type="checkbox" id="display-vertical-line" name="display-vertical-line" checked>
-          </div>
-          <button type="submit" id="reading-practice-generate-button">Generate</button>
-        </div>
-        <main id="reading-practice">
-        </main>
-      </article>
-
-    </content>
+      </content>
   </main>
 </body>
 
