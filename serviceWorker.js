@@ -8,6 +8,7 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/index.html",
           "/favicon.ico",
+          "/static/assets/1000-words.txt",
           "/static/css/reset.css",
           "/static/css/style.css",
           "/static/img/nico-bako.png",
