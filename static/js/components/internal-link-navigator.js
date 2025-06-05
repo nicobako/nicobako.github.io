@@ -1,5 +1,5 @@
 "use strict";
-export class PageNavigator extends HTMLElement {
+export class InternalLinkNavigator extends HTMLElement {
   constructor() {
     super();
   }

@@ -6,7 +6,7 @@ export class ReadingPractice extends HTMLElement {
   static observedAttributes = [
     "num-lines",
     "num-words-per-line",
-    "display-vertical-lines",
+    "display-vertical-line",
   ];
   constructor() {
     super();
@@ -22,16 +22,10 @@ export class ReadingPractice extends HTMLElement {
       3
     );
 
-    this.displayVerticalLines = this.parseBoolean(
-      this.getAttribute("display-vertical-lines"),
+    this.displayVerticalLine = this.parseBoolean(
+      this.getAttribute("display-vertical-line"),
       true
     );
-
-    this.content = this.querySelector(".reading-practice-content");
-    if (!this.content) {
-      console.error("Content element not found in reading-practice component.");
-      return;
-    }
 
     const incrementButton = this.querySelector(".increment-button");
     if (incrementButton) {
@@ -56,6 +50,18 @@ export class ReadingPractice extends HTMLElement {
       });
     }
 
+    const toggleLineButton = this.querySelector(
+      ".toggle-vertical-line-button"
+    );
+    if (toggleLineButton) {
+      toggleLineButton.addEventListener("click", () => {
+        this.setAttribute(
+          "display-vertical-line",
+          !this.displayVerticalLine
+        );
+      });
+    }
+
     this.render();
   }
 
@@ -64,13 +70,18 @@ export class ReadingPractice extends HTMLElement {
       this.lineCount = this.parseInt(newValue, oldValue);
     } else if (name === "num-words-per-line") {
       this.numberOfWordsPerLine = this.parseInt(newValue, oldValue);
-    } else if (name === "display-vertical-lines") {
-      this.displayVerticalLines = this.parseBoolean(newValue, oldValue);
+    } else if (name === "display-vertical-line") {
+      this.displayVerticalLine = this.parseBoolean(newValue, oldValue);
     }
     this.render();
   }
 
   render() {
+    this.content = this.querySelector(".reading-practice-content");
+    if (!this.content) {
+      console.error("Content element not found in reading-practice component.");
+      return;
+    }
     const div = document.createElement("div");
     div.classList.add("light");
 
@@ -86,7 +97,7 @@ export class ReadingPractice extends HTMLElement {
 
       div.appendChild(p);
     }
-    if (this.displayVerticalLines) {
+    if (this.displayVerticalLine) {
       div.classList.add("vertical-line");
     } else {
       div.classList.remove("vertical-line");

@@ -32,10 +32,10 @@
 
 <body>
   <main class="container" class="dark">
-    <page-navigator>
+    <internal-link-navigator>
       <nav>
         <div id="logo" class="row row-center">
-          <a href="#home">
+          <a class="link-internal" href="#home">
             <em>
               nicobako
             </em>
@@ -46,22 +46,22 @@
           <ul>
 
             <li>
-              <a href="#about-site">
+              <a class="link-internal" href="#about-site">
                 About Site
               </a>
             </li>
             <li>
-              <a href="#other-links">
+              <a class="link-internal" href="#other-links">
                 Other Work
               </a>
             </li>
             <li>
-              <a href="#other-works">
+              <a class="link-internal" href="#other-works">
                 Other Links
               </a>
             </li>
             <li>
-              <a href="#reading-practice">
+              <a class="link-internal" href="#reading-practice">
                 Reading Practice
               </a>
             </li>
@@ -144,15 +144,24 @@
           <reading-practice num-lines="aeae" num-words-per-line="3" display-vertical-line="true">
 
             <header>Reading Practice</header>
-            <button class="generate-button">
-              Generate
-            </button>
-            <button class="increment-button">
-              Increment
-            </button>
-            <button class="decrement-button">
-              Decrement
-            </button>
+            <div class="column">
+              <button class="generate-button">
+                Generate
+              </button>
+              <span>Words Per Line</span>
+              <div class="row">
+
+                <button class="increment-button">
+                  Increment
+                </button>
+                <button class="decrement-button">
+                  Decrement
+                </button>
+              </div>
+              <button role="switch" class="toggle-vertical-line-button">
+                Toggle Vertical Line
+              </button>
+            </div>
 
             <main class="reading-practice-content">
               This reading practice requires JavaScript enabled.

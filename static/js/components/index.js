@@ -1,7 +1,7 @@
 "use strict";
 
-import { PageNavigator } from "./navigator.js";
+import { InternalLinkNavigator } from "./internal-link-navigator.js";
 import { ReadingPractice } from "./reading-practice.js";
 
-customElements.define("page-navigator", PageNavigator);
+customElements.define("internal-link-navigator", InternalLinkNavigator);
 customElements.define("reading-practice", ReadingPractice);

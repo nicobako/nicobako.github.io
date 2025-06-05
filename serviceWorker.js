@@ -8,15 +8,13 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/index.html",
           "/favicon.ico",
-          "/static/assets/1000-words.txt",
           "/static/css/reset.css",
           "/static/css/style.css",
           "/static/img/nico-bako.png",
-          "/static/js/script.js",
-          "/pages/about_site.html",
-          "/pages/other_links.html",
-          "/pages/other_work.html",
-          "/pages/reading_practice.html",
+          "/static/js/components/index.js",
+          "/static/js/components/internal-link-navigator.js",
+          "/static/js/components/reading-practice.js",
+          "/static/js/components/words.js",
         ])
       )
   );
