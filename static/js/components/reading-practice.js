@@ -50,15 +50,10 @@ export class ReadingPractice extends HTMLElement {
       });
     }
 
-    const toggleLineButton = this.querySelector(
-      ".toggle-vertical-line-button"
-    );
+    const toggleLineButton = this.querySelector(".toggle-vertical-line-button");
     if (toggleLineButton) {
       toggleLineButton.addEventListener("click", () => {
-        this.setAttribute(
-          "display-vertical-line",
-          !this.displayVerticalLine
-        );
+        this.setAttribute("display-vertical-line", !this.displayVerticalLine);
       });
     }
 
@@ -83,7 +78,6 @@ export class ReadingPractice extends HTMLElement {
       return;
     }
     const div = document.createElement("div");
-    div.classList.add("light");
 
     for (let i = 0; i < this.lineCount; i++) {
       const p = document.createElement("p");

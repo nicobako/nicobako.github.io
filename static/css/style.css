@@ -15,15 +15,15 @@ oklch - LCh
 */
 :root {
   /* hues */
-  --hue-root: 247;
+  --hue-root: 205;
 
   /* colors */
-  --color-background: oklch(0.28 0.03 var(--hue-root));
-  --color-foreground: oklch(0.75 0.05 var(--hue-root));
+  --color-background: oklch(0.24 0.03 var(--hue-root));
+  --color-foreground: oklch(0.85 0.07 var(--hue-root));
   --color-mix: color-mix(
     in oklch,
-    var(--color-background) 50%,
-    var(--color-foreground) 50%
+    var(--color-background) 25%,
+    var(--color-foreground) 75%
   );
   --white: oklch(0.95 0 0);
   --black: oklch(0 0 0);
@@ -32,8 +32,8 @@ oklch - LCh
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
-  font-family: "Courier New", Courier, monospace;
-  font-size: 16px;
+  font-family: "Cambria", "Times New Roman", Times, serif;
+  font-size: 18px;
   line-height: 1.5;
 }
 
@@ -112,7 +112,7 @@ a:hover {
 }
 
 a:visited {
-  color: var(--color-mix);
+  color: inherit;
 }
 
 #reading-practice {
@@ -147,11 +147,29 @@ a:visited {
   bottom: 0;
   left: 50%;
   width: 1px;
-  background: var(--color-background);
+  background: color-mix(
+    in oklab,
+    var(--color-background) 25%,
+    var(--white) 75%
+  );
   transform: translateX(-50%);
 }
 
 #reading-practice div p {
   margin: 0;
   text-align: center;
+}
+
+button {
+  background-color: var(--color-mix);
+  border: none;
+  color: var(--color-background);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
 }
