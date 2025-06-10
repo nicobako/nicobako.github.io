@@ -8,10 +8,13 @@ self.addEventListener("install", (event) => {
         cache.addAll([
           "/index.html",
           "/favicon.ico",
+          "/manifest.webmanifest",
           "/static/css/reset.css",
           "/static/css/style.css",
           "/static/img/nico-bako.png",
           "/static/js/components/index.js",
+          "/static/js/components/my-article.js",
+          "/static/js/components/toggle-visibility.js",
           "/static/js/components/internal-link-navigator.js",
           "/static/js/components/reading-practice.js",
           "/static/js/components/words.js",
@@ -38,11 +41,11 @@ self.addEventListener("fetch", (event) => {
         event.waitUntil(cache.add(event.request));
         console.log("resource found in cache");
         return cachedResponse;
+      } else {
+        // If we didn't find a match in the cache, use the network.
+        console.error("resource not found in cache: ", event.request);
+        return fetch(event.request);
       }
-
-      // If we didn't find a match in the cache, use the network.
-      console.log("resource not found in cache");
-      return fetch(event.request);
     })()
   );
 });

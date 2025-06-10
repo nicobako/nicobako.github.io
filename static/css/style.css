@@ -62,12 +62,13 @@ details {
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+  padding: 1rem;
 }
 
+/* Used in conjunction wit .row */
 .row-center {
   justify-content: center;
   align-items: center;
-  padding: 1rem;
 }
 
 .column {
@@ -76,6 +77,10 @@ details {
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+}
+
+.hidden {
+  display: none;
 }
 
 #logo {

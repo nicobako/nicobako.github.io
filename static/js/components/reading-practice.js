@@ -13,8 +13,6 @@ export class ReadingPractice extends HTMLElement {
   }
 
   connectedCallback() {
-    this.words = words;
-
     this.lineCount = this.parseInt(this.getAttribute("num-lines"), 25);
 
     this.numberOfWordsPerLine = this.parseInt(
@@ -102,8 +100,8 @@ export class ReadingPractice extends HTMLElement {
   }
 
   randomWord() {
-    const randomIndex = this.randomNumber(0, this.words.length - 1);
-    return this.words[randomIndex];
+    const randomIndex = this.randomNumber(0, words.length - 1);
+    return words[randomIndex];
   }
   randomNumber = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;

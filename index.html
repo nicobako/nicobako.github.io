@@ -34,114 +34,126 @@
   <main class="container" class="dark">
     <internal-link-navigator>
       <nav>
-        <div id=" logo" class="row row-center">
-          <a class="link-internal" href="#home">
+        <div class="row row-center">
+          <a id="logo" class="internal-link" href="#home">
             <em>
               nicobako
             </em>
           </a>
+          <toggle-visibility item-selector="#pages">
+            <button>Pages</button>
+          </toggle-visibility>
         </div>
-        <details id="pages" class="light">
-          <summary>Pages</summary>
+        <menu id="pages" class="light hidden">
           <ul>
-
             <li>
-              <a class="link-internal" href="#about-site">
+              <a class="internal-link" href="#about-site">
                 About Site
               </a>
             </li>
             <li>
-              <a class="link-internal" href="#other-links">
+              <a class="internal-link" href="#other-links">
                 Other Work
               </a>
             </li>
             <li>
-              <a class="link-internal" href="#other-works">
+              <a class="internal-link" href="#other-works">
                 Other Links
               </a>
             </li>
             <li>
-              <a class="link-internal" href="#reading-practice">
+              <a class="internal-link" href="#reading-practice">
                 Reading Practice
               </a>
             </li>
           </ul>
-        </details>
+        </menu>
       </nav>
       </navigator-component>
 
       <content id="content">
-        <article id="home">
-          <header>Welcome</header>
-          <p>
-            My name is Nico.
+        <my-article id="home">
+          <span slot="header">Welcome</span>
+          <div slot="content">
 
-            I am a software engineer with a firm belief that
-            writing code is both a scientific and artistic process.
-          </p>
-          <p>
-            My goal is to create software that improves the lives of all people who interact with it.
-            Depending on the user, this can mean different things.
-          </p>
-          <p>
-            For a customer, this means that the software is easy to use and works properly.
-            For a developer, this means that the software is easy to understand and maintain.
-            And, for myself, this means that I enjoy both the process and the result of creating the software.
-          </p>
-          <p>
-            This site is just a simple way to claim a tiny piece of the internet,
-            and to build simple tools. I hope you enjoy it.
-          </p>
-        </article>
+            <p>
+              My name is Nico.
 
-        <article id="about-site">
-          <header>About Site</header>
-          <p>
-            This site is a playground for me to experiment with HTML, CSS, and JS.
-          </p>
-          <p>This site is built using <i>advanced Web Technologies</i>
-          <ul>
-            <li><a href="https://www.joshwcomeau.com/css/custom-css-reset/">Josh Comeau's CSS reset</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
-          </ul>
-          </p>
-          <p>
-            This site is
-            <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWA</a>
-            and can be installed for offline use.
-          </p>
-        </article>
+              I am a software engineer with a firm belief that
+              writing code is both a scientific and artistic process.
+            </p>
+            <p>
+              My goal is to create software that improves the lives of all people who interact with it.
+              Depending on the user, this can mean different things.
+            </p>
+            <p>
+              For a customer, this means that the software is easy to use and works properly.
+              For a developer, this means that the software is easy to understand and maintain.
+              And, for myself, this means that I enjoy both the process and the result of creating the software.
+            </p>
+            <p>
+              This site is just a simple way to claim a tiny piece of the internet,
+              and to build simple tools. I hope you enjoy it.
+            </p>
+          </div>
+        </my-article>
 
-        <article id="other-links">
-          <header>Other Links</header>
-          <ul>
-            <li>
-              <a href="https://github.com/nicobako" target="_blank">GitHub</a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/nicobako/" target="_blank">LinkedIn</a>
-            </li>
-          </ul>
-        </article>
+        <my-article id="about-site">
+          <span slot="header">About This Site</span>
+          <div slot="content">
+            <p>
+              This site is a playground for me to experiment with HTML, CSS, and JS.
+            </p>
+            <p>This site is built using <i>advanced Web Technologies</i>
+            <ul>
+              <li><a href="https://www.joshwcomeau.com/css/custom-css-reset/">Josh Comeau's CSS reset</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">HTML</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS">CSS</a></li>
+              <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">JavaScript</a></li>
+            </ul>
+            </p>
+            <p>
+              This site is
+              <a href="https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps">PWA</a>
+              and can be installed for offline use.
+            </p>
+          </div>
+        </my-article>
 
-        <article id="other-works">
-          <header>Other Work</header>
-          <p>
-            <a href="https://nicobako.me/pythonic-misadventures" target="_blank">Pythonic Misadventures</a>, a simple
-            blog
-            where I try to solve interesting problems with Python.
-          </p>
-          <p class="">
-            <a href="https://github.com/nicobako/grist-widgets">Grist Widgets</a>, for
-            the amazing
-            <a href="https://docs.getgrist.com/">Grist Spreadsheet/Database Tool</a>.
-          </p>
-        </article>
+        <my-article id="other-links">
+          <span slot="header">Other Links</span>
+          <div slot="content">
+
+            <ul>
+              <li>
+                <a href="https://github.com/nicobako" target="_blank">GitHub</a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/nicobako/" target="_blank">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </my-article>
+
+        <my-article id="other-works">
+          <span slot="header">Other Work</span>
+          <div slot="content">
+
+            <p>
+              <a href="https://nicobako.me/pythonic-misadventures" target="_blank">Pythonic Misadventures</a>, a simple
+              blog
+              where I try to solve interesting problems with Python.
+            </p>
+            <p class="">
+              <a href="https://github.com/nicobako/grist-widgets">Grist Widgets</a>, for
+              the amazing
+              <a href="https://docs.getgrist.com/">Grist Spreadsheet/Database Tool</a>.
+            </p>
+          </div>
+        </my-article>
 
         <article id="reading-practice">
-          <reading-practice num-lines="aeae" num-words-per-line="3" display-vertical-line="true">
+          <reading-practice num-lines="25" num-words-per-line="3" display-vertical-line="true">
 
             <header>Reading Practice</header>
             <div class="column">
@@ -171,13 +183,35 @@
             </div>
 
             <main class="reading-practice-content">
-              This reading practice requires JavaScript enabled.
+              <noscript>
+                <p>
+                  Please enable JavaScript to use the reading practice tool.
+                </p>
+              </noscript>
             </main>
           </reading-practice>
         </article>
       </content>
     </internal-link-navigator>
   </main>
+  <div id="templates" class="hidden">
+    <template id="my-article-template">
+      <style>
+        header {
+          font-size: larger;
+        }
+      </style>
+      <article>
+        <header>
+          <slot name="header"></slot>
+        </header>
+        <main>
+          <slot name="content"></slot>
+          <slot></slot> <!-- slot for additional content -->
+        </main>
+      </article>
+    </template>
+  </div>
 </body>
 
 </html>
