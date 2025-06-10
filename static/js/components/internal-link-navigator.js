@@ -37,7 +37,7 @@ export class InternalLinkNavigator extends HTMLElement {
       console.error("Content element not found in navigator-component.");
       return;
     }
-    const articles = content.querySelectorAll("article,my-article");
+    const articles = content.querySelectorAll("my-article");
     for (const article of articles) {
       article.classList.add("hidden");
     }

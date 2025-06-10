@@ -50,10 +50,7 @@ body {
 details {
   border-radius: 0.5rem;
   padding: 1rem;
-}
-
-#pages summary {
-  font-size: 1.25rem;
+  background-color: var(--color-mix);
 }
 
 .row {
@@ -118,51 +115,6 @@ a:hover {
 
 a:visited {
   color: inherit;
-}
-
-#reading-practice {
-  margin: 1rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  align-items: center;
-  padding-top: 1rem;
-  max-width: 100%;
-}
-
-#reading-practice div {
-  border-radius: 0.5rem;
-  padding: 1rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-#reading-practice div.vertical-line {
-  position: relative;
-}
-
-#reading-practice div.vertical-line::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 1px;
-  background: color-mix(
-    in oklab,
-    var(--color-background) 25%,
-    var(--white) 75%
-  );
-  transform: translateX(-50%);
-}
-
-#reading-practice div p {
-  margin: 0;
-  text-align: center;
 }
 
 button {

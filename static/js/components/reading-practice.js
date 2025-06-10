@@ -10,6 +10,12 @@ export class ReadingPractice extends HTMLElement {
   ];
   constructor() {
     super();
+    const template = document.getElementById("reading-practice-template");
+    if (template === null) {
+      console.error("Failed to load template");
+    }
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
   connectedCallback() {
@@ -25,13 +31,13 @@ export class ReadingPractice extends HTMLElement {
       true
     );
 
-    const incrementButton = this.querySelector(".increment-button");
+    const incrementButton = this.shadowRoot.querySelector(".increment-button");
     if (incrementButton) {
       incrementButton.addEventListener("click", () => {
         this.setAttribute("num-words-per-line", this.numberOfWordsPerLine + 1);
       });
     }
-    const decrementButton = this.querySelector(".decrement-button");
+    const decrementButton = this.shadowRoot.querySelector(".decrement-button");
     if (decrementButton) {
       decrementButton.addEventListener("click", () => {
         this.setAttribute(
@@ -41,14 +47,16 @@ export class ReadingPractice extends HTMLElement {
       });
     }
 
-    const generateButton = this.querySelector(".generate-button");
+    const generateButton = this.shadowRoot.querySelector(".generate-button");
     if (generateButton) {
       generateButton.addEventListener("click", () => {
         this.render();
       });
     }
 
-    const toggleLineButton = this.querySelector(".toggle-vertical-line-button");
+    const toggleLineButton = this.shadowRoot.querySelector(
+      ".toggle-vertical-line-button"
+    );
     if (toggleLineButton) {
       toggleLineButton.addEventListener("click", () => {
         this.setAttribute("display-vertical-line", !this.displayVerticalLine);
@@ -70,7 +78,7 @@ export class ReadingPractice extends HTMLElement {
   }
 
   render() {
-    this.content = this.querySelector(".reading-practice-content");
+    this.content = this.shadowRoot.querySelector(".reading-practice-content");
     if (!this.content) {
       console.error("Content element not found in reading-practice component.");
       return;
