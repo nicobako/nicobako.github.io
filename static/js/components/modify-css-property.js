@@ -8,9 +8,15 @@ export class ModifyCssProperty extends HTMLElement {
 
     if (this.inputElement) {
       const property = this.getAttribute("property");
-      const value =
-        document.documentElement.style.getPropertyValue(property) ||
-        this.getAttribute("value");
+      const unit = this.getAttribute("unit") || "";
+      const styleValue = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue(property);
+      const formattedStyleValue = styleValue?.substring(
+        0,
+        styleValue.length - unit.length
+      );
+      const value = formattedStyleValue;
       this.inputElement.value = value;
       this.inputElement.addEventListener("input", () => {
         this.updateRootCSS();

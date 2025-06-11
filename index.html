@@ -77,7 +77,13 @@
               <!-- Putting the slider before the label helps with slider not moving when text size changes -->
               <modify-css-property property="--hue-root">
                 <input id="root-hue" type="range" min="0" max="360" step="1" />
-                <label for="root-hue">Root Hue</label>
+                <label for="root-hue">Hue</label>
+              </modify-css-property>
+            </li>
+            <li>
+              <modify-css-property property="--chroma">
+                <input id="chroma" type="range" min="0.0" max="1.0" step="0.01" />
+                <label for="chroma">Chroma</label>
               </modify-css-property>
             </li>
             <li>

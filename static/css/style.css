@@ -17,6 +17,9 @@ oklch - LCh
   /* hues */
   --hue-root: 205;
 
+  /* chroma */
+  --chroma: 0.05;
+
   /* lightness - 5 shades */
   --lightness-none: 0;
   --lightness-low: 0.23;
@@ -26,8 +29,10 @@ oklch - LCh
   --lightness-complete: 0.95;
 
   /* colors */
-  --color-background: oklch(var(--lightness-low) 0.03 var(--hue-root));
-  --color-foreground: oklch(var(--lightness-high) 0.07 var(--hue-root));
+  --color-background: oklch(var(--lightness-low) var(--chroma) var(--hue-root));
+  --color-foreground: oklch(
+    var(--lightness-high) var(--chroma) var(--hue-root)
+  );
   --color-mix: color-mix(
     in oklch,
     var(--color-background) 25%,
