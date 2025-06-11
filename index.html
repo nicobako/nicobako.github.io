@@ -74,9 +74,16 @@
         <menu id="customize" class="light hidden">
           <ul>
             <li>
+              <!-- Putting the slider before the label helps with slider not moving when text size changes -->
               <modify-css-property property="--hue-root">
-                <label for="root-hue">Root Hue</label>
                 <input id="root-hue" type="range" min="0" max="360" step="1" />
+                <label for="root-hue">Root Hue</label>
+              </modify-css-property>
+            </li>
+            <li>
+              <modify-css-property property="--font-size" unit="px">
+                <input id="font-size" type="range" min="8" max="32" step="1" />
+                <label for="font-size">Font Size (px)</label>
               </modify-css-property>
             </li>
           </ul>

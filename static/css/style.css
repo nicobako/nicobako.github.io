@@ -35,13 +35,15 @@ oklch - LCh
   );
   --white: oklch(0.95 0 0);
   --black: oklch(0 0 0);
+
+  --font-size: 18px;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-foreground);
   font-family: "Cambria", "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: var(--font-size);
   line-height: 1.5;
 }
 

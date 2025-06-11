@@ -24,6 +24,7 @@ export class ModifyCssProperty extends HTMLElement {
 
   updateRootCSS() {
     const property = this.getAttribute("property");
+    const unit = this.getAttribute("unit") || "";
     const inputElement = this.querySelector("input");
     const value = inputElement
       ? inputElement.value
@@ -35,7 +36,8 @@ export class ModifyCssProperty extends HTMLElement {
       );
       return;
     }
+    const finalValue = `${value}${unit}`.trim();
     // Set the CSS variable on the root element
-    document.documentElement.style.setProperty(property, value);
+    document.documentElement.style.setProperty(property, finalValue);
   }
 }
