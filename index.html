@@ -34,7 +34,7 @@
   <main class="container" class="dark">
     <internal-link-navigator>
       <nav>
-        <div class="row row-center">
+        <div class="row row-between">
           <a id="logo" class="internal-link" href="#home">
             <em>
               nicobako
@@ -42,6 +42,9 @@
           </a>
           <toggle-visibility item-selector="#pages">
             <button>Pages</button>
+          </toggle-visibility>
+          <toggle-visibility item-selector="#customize">
+            <button>Customize</button>
           </toggle-visibility>
         </div>
         <menu id="pages" class="light hidden">
@@ -65,6 +68,16 @@
               <a class="internal-link" href="#reading-practice">
                 Reading Practice
               </a>
+            </li>
+          </ul>
+        </menu>
+        <menu id="customize" class="light hidden">
+          <ul>
+            <li>
+              <modify-css-property property="--hue-root">
+                <label for="root-hue">Root Hue</label>
+                <input id="root-hue" type="range" min="0" max="360" step="1" />
+              </modify-css-property>
             </li>
           </ul>
         </menu>
@@ -250,6 +263,27 @@
         </noscript>
       </main>
     </template>
+    <template id="modify-css-property-template">
+      <style>
+        .modify-css-property {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .modify-css-property label {
+          margin-bottom: 0.5rem;
+        }
+
+        .modify-css-property input {
+          width: 100%;
+        }
+      </style>
+      <div class="modify-css-property">
+        <label for="variable-input">
+          <span>Modify <span class="variable-name"></span></span>
+        </label>
+        <input type="range" id="variable-input" min="" max="" step="" />
+      </div>
   </div>
 </body>
 
