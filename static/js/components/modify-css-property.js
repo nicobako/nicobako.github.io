@@ -18,6 +18,7 @@ export class ModifyCssProperty extends HTMLElement {
       );
       const value = formattedStyleValue;
       this.inputElement.value = value;
+      this.updateRootCSS();
       this.inputElement.addEventListener("input", () => {
         this.updateRootCSS();
       });
@@ -45,5 +46,13 @@ export class ModifyCssProperty extends HTMLElement {
     const finalValue = `${value}${unit}`.trim();
     // Set the CSS variable on the root element
     document.documentElement.style.setProperty(property, finalValue);
+    const span = document.createElement("span");
+    span.textContent = `: ${finalValue}`;
+    const existingSpan = this.querySelector("span");
+    if (existingSpan) {
+      existingSpan.replaceWith(span);
+    } else {
+      this.appendChild(span);
+    }
   }
 }
