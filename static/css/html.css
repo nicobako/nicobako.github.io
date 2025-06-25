@@ -1,0 +1,107 @@
+/* style for html elements */
+
+/* Color Notes
+oklab - Lab
+- L: Lightness (0 - 1) or 0% to 100%
+- a: green to red (-0.4 - 0.4) or 0% to 100%
+- b: blue to yellow (-0.4 - 0.4) or 0% to 100%
+- oklab(0.5 0 0) is a light gray
+
+oklch - LCh
+- L: Lightness (0 - 1) or 0% to 100%
+- C: Chroma (0 - 1) or 0% to 100%
+- h: Hue (0 - 360) or 0% to 100%
+*/
+
+:root {
+  /* hues */
+  --hue-root: 205;
+
+  /* chroma */
+  --chroma: 0.05;
+
+  /* lightness - 5 shades */
+  --lightness-none: 0;
+  --lightness-low: 0.23;
+  --lightness-2: 0.4;
+  --lightness-middle: 0.6;
+  --lightness-high: 0.85;
+  --lightness-complete: 0.95;
+
+  /* colors */
+  --color-background: oklch(var(--lightness-low) var(--chroma) var(--hue-root));
+  --color-foreground: oklch(
+    var(--lightness-high) var(--chroma) var(--hue-root)
+  );
+  --color-mix: color-mix(
+    in oklch,
+    var(--color-background) 25%,
+    var(--color-foreground) 75%
+  );
+  --white: oklch(0.95 0 0);
+  --black: oklch(0 0 0);
+
+  --font-size: 18px;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: "Cambria", "Times New Roman", Times, serif;
+  font-size: var(--font-size);
+  line-height: 1.5;
+}
+
+details {
+  border-radius: 0.5rem;
+  padding: 1rem;
+  background-color: var(--color-mix);
+}
+
+main {
+  padding: 0% 1rem;
+}
+
+article {
+  background-color: inherit;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+article header {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--color-mix);
+}
+
+a:visited {
+  color: inherit;
+}
+
+button {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+  border: none;
+  color: var(--color-background);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}

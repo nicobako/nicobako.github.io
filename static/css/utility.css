@@ -1,0 +1,40 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+  align-items: center;
+}
+
+/* Used in conjunction wit .row */
+.row-center {
+  justify-content: center;
+}
+
+.row-between {
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.dark {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+
+.light {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}

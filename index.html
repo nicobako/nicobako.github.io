@@ -8,9 +8,6 @@
 
   <title>nicobako</title>
 
-  <!-- reset css https://www.joshwcomeau.com/css/custom-css-reset/ -->
-  <link rel="stylesheet" href="/static/css/reset.css" />
-
   <!-- custom css -->
   <link rel="stylesheet" href="/static/css/style.css" />
 
@@ -31,21 +28,56 @@
 </head>
 
 <body>
-  <main class="container" class="dark">
-    <internal-link-navigator>
+  <internal-link-navigator>
+    <header class="row row-between">
+      <a id="logo" class="internal-link" href="#home">
+        <em>
+          nicobako
+        </em>
+      </a>
+      <a class="internal-link" href="#site-navigation">
+        <span>menu</span>
+      </a>
+    </header>
+    <my-article id="site-navigation">
+      <span slot="header">Site Navigation</span>
+      <div slot="content">
+        <nav>
+          <menu id="pages">
+            <li>
+              <a class="internal-link" href="#about-site">
+                About Site
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="#other-links">
+                Other Work
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="#other-works">
+                Other Links
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="#reading-practice">
+                Reading Practice
+              </a>
+            </li>
+            <li>
+              <a class="internal-link" href="#customize">
+                Customize
+              </a>
+            </li>
+          </menu>
+        </nav>
+      </div>
+    </my-article>
+
+    <main class="container" class="dark">
       <nav>
         <div class="row row-between">
-          <a id="logo" class="internal-link" href="#home">
-            <em>
-              nicobako
-            </em>
-          </a>
-          <toggle-visibility item-selector="#pages">
-            <button>Pages</button>
-          </toggle-visibility>
-          <toggle-visibility item-selector="#customize">
-            <button>Customize</button>
-          </toggle-visibility>
+
         </div>
         <menu id="pages" class="light hidden">
           <ul>
@@ -71,29 +103,7 @@
             </li>
           </ul>
         </menu>
-        <menu id="customize" class="light hidden">
-          <ul>
-            <li>
-              <!-- Putting the slider before the label helps with slider not moving when text size changes -->
-              <modify-css-property property="--hue-root">
-                <input id="root-hue" type="range" min="0" max="360" step="1" />
-                <label for="root-hue">Hue</label>
-              </modify-css-property>
-            </li>
-            <li>
-              <modify-css-property property="--chroma">
-                <input id="chroma" type="range" min="0.0" max="0.6" step="0.01" />
-                <label for="chroma">Chroma</label>
-              </modify-css-property>
-            </li>
-            <li>
-              <modify-css-property property="--font-size" unit="px">
-                <input id="font-size" type="range" min="8" max="32" step="1" />
-                <label for="font-size">Font Size (px)</label>
-              </modify-css-property>
-            </li>
-          </ul>
-        </menu>
+
       </nav>
       </navigator-component>
 
@@ -184,9 +194,36 @@
             </reading-practice>
           </div>
         </my-article>
+
+        <my-article id="customize">
+          <span slot="header">Customize</span>
+          <div slot="content">
+            <ul>
+              <li>
+                <!-- Putting the slider before the label helps with slider not moving when text size changes -->
+                <modify-css-property property="--hue-root">
+                  <input id="root-hue" type="range" min="0" max="360" step="1" />
+                  <label for="root-hue">Hue</label>
+                </modify-css-property>
+              </li>
+              <li>
+                <modify-css-property property="--chroma">
+                  <input id="chroma" type="range" min="0.0" max="0.6" step="0.01" />
+                  <label for="chroma">Chroma</label>
+                </modify-css-property>
+              </li>
+              <li>
+                <modify-css-property property="--font-size" unit="px">
+                  <input id="font-size" type="range" min="8" max="32" step="1" />
+                  <label for="font-size">Font Size (px)</label>
+                </modify-css-property>
+              </li>
+            </ul>
+          </div>
+        </my-article>
       </content>
-    </internal-link-navigator>
-  </main>
+    </main>
+  </internal-link-navigator>
 
   <div id="templates" class="hidden">
     <template id="my-article-template">

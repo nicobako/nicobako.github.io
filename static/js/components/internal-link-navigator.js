@@ -13,7 +13,6 @@ export class InternalLinkNavigator extends HTMLElement {
       this.displayCurrentHash();
     });
 
-    const menu = this.querySelector("menu");
     const internalLinks = this.querySelectorAll(".internal-link");
     for (const anchor of internalLinks) {
       anchor.addEventListener("click", async (event) => {
@@ -21,9 +20,7 @@ export class InternalLinkNavigator extends HTMLElement {
           return;
         }
         const id = event.target.getAttribute("href");
-
         this.displayArticle(id);
-        menu.classList.toggle("hidden");
         // do not prevent default behavior
         // as we want the browser to update the URL
         // event.preventDefault();
@@ -32,12 +29,7 @@ export class InternalLinkNavigator extends HTMLElement {
   }
 
   displayArticle(articleQuerySelector) {
-    const content = document.getElementById("content");
-    if (!content) {
-      console.error("Content element not found in navigator-component.");
-      return;
-    }
-    const articles = content.querySelectorAll("my-article");
+    const articles = this.querySelectorAll("my-article");
     for (const article of articles) {
       article.classList.add("hidden");
     }
