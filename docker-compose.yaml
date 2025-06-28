@@ -25,13 +25,15 @@ services:
     develop:
       watch:
         - action: sync
-          path: ./src
-          target: /app/src
-
-#     volumes:
-#       - type: bind
-#         source: ./output
-#         target: /app/output
+          path: ./build.py
+          target: /app/build.py
+        - action: sync
+          path: ./templates
+          target: /app/templates
+    volumes:
+      - type: bind
+        source: ./output
+        target: /app/output
 
 # volumes:
 #   jinja-output:

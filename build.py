@@ -51,6 +51,15 @@ index = Page(
     },
 )
 
-pages: list[Page] = [index]
+other_page = Page(
+    template="index.html",
+    output="other.html",
+    context={
+        "title": "Other Page",
+        "content": "This is another Jinja2 template example.",
+    },
+)
+
+pages: list[Page] = [index, other_page]
 for page in pages:
     page.render(config)
