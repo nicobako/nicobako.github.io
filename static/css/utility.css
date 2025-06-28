@@ -23,6 +23,11 @@
   flex-wrap: wrap;
   gap: 1rem;
   width: 100%;
+  align-items: default;
+}
+
+.column-space-between {
+  justify-content: stretch;
 }
 
 .hidden {

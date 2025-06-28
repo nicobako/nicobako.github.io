@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-      target: web
+      target: web-server
     ports:
       - "8080:8080"
     develop:
@@ -14,3 +14,26 @@ services:
         - action: sync
           path: .
           target: /app
+  jinja:
+    container_name: nicobako-github-io-jinja
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: jinja-builder
+    stdin_open: true # -i
+    tty: true # -t
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+
+#     volumes:
+#       - type: bind
+#         source: ./output
+#         target: /app/output
+
+# volumes:
+#   jinja-output:
+
+    
