@@ -18,9 +18,13 @@ FROM python:3.13-slim AS python
 # USER APP
 # RUN useradd -ms /bin/sh -u 1001 app
 # USER app
+# from https://docs.docker.com/compose/how-tos/file-watch/#prerequisites
+RUN useradd -ms /bin/sh -u 1001 app
+USER app
 WORKDIR /app
-COPY . .
+COPY --chown=app:app . /app
 
 # Build static files using jinja2
 FROM python AS jinja-builder
 RUN pip install jinja2
+RUN python build.py

@@ -12,7 +12,7 @@ services:
     develop:
       watch:
         - action: sync
-          path: .
+          path: ./output
           target: /app
   jinja:
     container_name: nicobako-github-io-jinja
@@ -20,22 +20,21 @@ services:
       context: .
       dockerfile: Dockerfile
       target: jinja-builder
+    command: python build.py
     stdin_open: true # -i
     tty: true # -t
     develop:
       watch:
-        - action: sync
+        - action: sync+restart
           path: ./build.py
           target: /app/build.py
-        - action: sync
+        - action: sync+restart
           path: ./templates
           target: /app/templates
     volumes:
       - type: bind
         source: ./output
         target: /app/output
-
 # volumes:
 #   jinja-output:
 
-    
