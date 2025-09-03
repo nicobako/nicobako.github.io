@@ -2,6 +2,7 @@ import dataclasses
 from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, select_autoescape
 
+
 @dataclasses.dataclass
 class Config:
     template_path: Path
@@ -17,9 +18,10 @@ class Config:
             raise ValueError(f"Template path {self.template_path} is not a directory.")
         return True
 
+
 config = Config(
-    template_path=Path('templates'),
-    output_path=Path('output'),
+    template_path=Path("templates"),
+    output_path=Path("docs"),
 )
 
 env = Environment(
@@ -29,6 +31,7 @@ env = Environment(
     autoescape=select_autoescape(),
 )
 
+
 @dataclasses.dataclass
 class Page:
     template: str
@@ -36,11 +39,15 @@ class Page:
     context: dict[str, str]
 
     def render(self, config: Config):
+        print(
+            f"Rendering {self.template} to {self.output} with context: {self.context}"
+        )
         template = env.get_template(self.template)
         text = template.render(**self.context)
         output_path = config.output_path / self.output
         output_path.parent.mkdir(parents=True, exist_ok=True)
-        output_path.write_text(text, encoding='utf-8')
+        output_path.write_text(text, encoding="utf-8")
+
 
 index = Page(
     template="index.html",

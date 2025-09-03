@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{{ title }}</title>
-  </head>
-  <body>
-    <h1>Welcome to my more than My Basic-ish HTML Page</h1>
-    <p>This is a complex HTML template.</p>
-    <p>{{ content }}</p>
-  </body>
-</html>
+{% extends "base.html" %} {% block title %}nicobako - Home{% endblock title %}
+{% block content %}
+<h1>Welcome to nicobako!</h1>
+<p>Hello. Again. This is the home page of the nicobako application.</p>
+{% endblock content %}
